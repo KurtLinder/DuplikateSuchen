@@ -5,16 +5,15 @@
 
     public class DuplikateSuchenViewModel
     {
-
-        public readonly Model.DuplikateSuchen duplikate;
+        public readonly Model.DuplikateSuchen duplikateSuchen;
         public VisuAnzeigen ViAnzeige { get; set; }
         public DuplikateSuchenViewModel(MainWindow mainWindow)
         {
-            duplikate = new Model.DuplikateSuchen(mainWindow);
-            ViAnzeige = new VisuAnzeigen(mainWindow, duplikate);
+            duplikateSuchen = new Model.DuplikateSuchen();
+            ViAnzeige = new VisuAnzeigen(mainWindow, duplikateSuchen);
         }
 
-        public Model.DuplikateSuchen Duplikate { get { return duplikate; } }
+        public Model.DuplikateSuchen DuplikateSuchen { get { return duplikateSuchen; } }
 
 
         #region SucheStarten
@@ -25,12 +24,11 @@
             {
                 if (_sucheStarten == null)
                 {
-                    _sucheStarten = new RelayCommand(p => duplikate.SucheStarten(), p => true);
+                    _sucheStarten = new RelayCommand(p => duplikateSuchen.SucheStarten(), p => true);
                 }
                 return _sucheStarten;
             }
         }
         #endregion
-
     }
 }

@@ -2,7 +2,6 @@
 
 namespace DuplikateSuchen
 {
-
     public partial class MainWindow : Window
     {
 

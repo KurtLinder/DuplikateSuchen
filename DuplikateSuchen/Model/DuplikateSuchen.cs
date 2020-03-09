@@ -1,19 +1,26 @@
-﻿using System;
+﻿using System.Text;
 
 namespace DuplikateSuchen.Model
 {
     public class DuplikateSuchen
     {
-        private MainWindow mainWindow;
+        public OrdnerDateien Od { get; set; }
+        public int AnzahlEintrage { get; set; }
+        public StringBuilder OrdnerString { get; set; }
 
-        public DuplikateSuchen(MainWindow mainWindow)
+        private readonly string ordner = "k:\\1&1\\";
+
+        public DuplikateSuchen()
         {
-            this.mainWindow = mainWindow;
+            AnzahlEintrage = 0;
+            OrdnerString = new StringBuilder();
+            Od = new OrdnerDateien();
         }
 
         internal void SucheStarten()
         {
-            throw new NotImplementedException();
+            OrdnerString.Clear();
+            Od.Suchen(ordner);           
         }
     }
 }

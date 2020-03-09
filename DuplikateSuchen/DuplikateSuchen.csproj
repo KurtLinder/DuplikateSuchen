@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -56,6 +57,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\DuplikateSuchen.cs" />
+    <Compile Include="Model\OrdnerDateien.cs" />
     <Compile Include="ViewModel\DuplikateSuchenViewModel.cs" />
     <Compile Include="ViewModel\VisuAnzeigen.cs" />
     <Page Include="MainWindow.xaml">
